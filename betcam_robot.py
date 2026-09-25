@@ -621,7 +621,7 @@ async def cb_how_it_works(callback: CallbackQuery, state: FSMContext):
         "<b>Claim Welcome Bonus</b> — Get balance bonus credited\n"
         "<b>Play & Use Predictions</b> — Analyze stream rooms with the bot\n"
         "<b>Withdraw Profit</b> — Cash out your winnings\n\n"
-        f'<i><a href="{NOTION_GUIDE_URL}">Notion knowledge Base & Guide</a></i>'
+        f'<i><a href="{GUIDE_URL}">User Guide & Knowledge Base</a></i>'
     )
     kb = InlineKeyboardMarkup(
         inline_keyboard=[
