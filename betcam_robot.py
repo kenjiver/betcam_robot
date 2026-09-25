@@ -22,15 +22,15 @@ from aiogram.types import (
 )
 from playwright.async_api import async_playwright
 
-# Берем токен из настроек Render (или дефолтный)
+
 BOT_TOKEN = os.getenv("BOT_TOKEN", "8962365482:AAG8HIx8fNtAeeAmldHrh9HkvjrdIXDyMv4")
 LANDING_URL = "https://betcam.app"
 
-# Относительные пути (файлы должны лежать в корне проекта рядом с ботом)
+
 PHOTO_PATH = os.getenv("PHOTO_PATH", "image.jfif")
 VIDEO_PATH = os.getenv("VIDEO_PATH", "betcam.mp4")
 DEBUG_SCREENSHOT_PATH = "debug_screenshot.png"
-NOTION_GUIDE_URL = "https://app.notion.com/p/BetCam-Predictor-Comprehensive-User-Guide-Knowledge-Base-betcam_robot-3e1f9d99a7848007b38cda57ed041283"
+GUIDE_URL = "https://bars-cheat-mch.craft.me/Z0OfbvzpkggWMX"
 
 ADMIN_ID = 8124458627
 CURRENT_PROMO_CODE = "CAM10"
@@ -834,7 +834,7 @@ async def process_new_promo(message: Message, state: FSMContext):
         await message.answer(caption, parse_mode=ParseMode.HTML, reply_markup=kb)
 
 
-# --- ФИКТИВНЫЙ ВЕБ-СЕРВЕР ДЛЯ RENDER ---
+
 async def health_check(request):
     return web.Response(text="Bot is running!")
 
@@ -851,7 +851,7 @@ async def start_web_server():
 
 
 async def main():
-    # Запускаем фиктивный сервер для Render
+    
     await start_web_server()
     print("Bot is running...")
     await dp.start_polling(bot)
